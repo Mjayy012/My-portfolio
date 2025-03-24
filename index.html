@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Mark jay - Portfolio</title>
+    </head>
+    <body>
+
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    Mark jay
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skill" class="nav__link">Skills</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#project" class="nav__link">Project</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#faqs" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact Us</a>
+                        </li>
+                        
+                        
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                    
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <br>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home" style="background: linear-gradient(rgba(0, 0, 0, 0.189), rgb(0, 0, 0)), url('./assets/img/bg.jpg') no-repeat center center/cover;">
+                <div class="home__container container grid">
+                    <img src="assets/img/cropped_image.png" alt="" class="home__img">
+                    <div class="section__text">
+                        <p class="section__text__p1">Hello, I'm</p>
+                        <h1 class="title">Mark jay</h1>
+                        <p class="section__text__p2"><span class="typewriter-text"></span><label for="">|</label></p>
+                        <br>
+                        <div class="btn-container">
+                            <button id="downloadCVBtn" class="cv">Download CV</button>
+
+                          <a href="#contact" class="nav__link" 
+                          style="
+                          background-color: white;
+                          color: black;
+                          padding-top: 7px;
+                          padding-bottom: 7px;
+                          padding-left: 15px;
+                          padding-right: 15px;
+                          border-radius: 1.5rem;
+                          font-weight: var(--font-medium);
+                          transition: .3s;
+                          border: 1px solid rgb(0, 0, 0);">Contact Info</a>
+
+                        </div>
+                        <div id="socials-container">
+                          <img
+                            src="assets/img/linkin.png"
+                            alt="My LinkedIn profile"
+                            class="icon"
+                            onclick="location.href='https://www.linkedin.com/in/mark-jay-bares-27492b279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'"
+                          />
+                          <img
+                            src="assets/img/github.png"
+                            alt="My Github profile"
+                            class="icon"
+                            onclick="location.href='https://github.com/Mjayy012'"
+                          />         
+                          
+                        </div>
+                      </div>
+                      
+
+                    <div class="home__social">
+                        
+                        <span class="home__social-follow">Follow Me</span>
+
+                        <div class="home__social-links">
+                            <a href="https://www.facebook.com/markjay.bares.2024" target="_blank" class="home__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/markjaybares?igsh=dmF6ZTU5MDVtaGZj" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://www.instagram.com/markjaybares?igsh=dmF6ZTU5MDVtaGZj" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                 
+            </section>
+
+            
+            <!--==================== ABOUT ====================-->
+            <section class="about section container" id="about">
+                <div class="aboutme grid">
+                            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">About me</h2>
+                        </div>
+                        <div class="content">
+                            <div class="column col-left reveall">
+                                <div class="img-card" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
+                                    <img src="assets/img/picture.jpg" alt="" class="about__img">
+                                    
+                                </div>
+                            </div>
+                            <div class="column col-right revealr">
+                                <h2 class="content-title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">Hello! I am <span class="name">Mark jay Bares</span></h2>
+                                <p class="paragraph-text" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">
+                                    Hi, I'm Mark jay Bares, a passionate web developer with expertise in creating user-friendly, responsive websites and web applications. With a strong foundation in HTML, CSS, JavaScript, and various frameworks, I enjoy bringing ideas to life and crafting seamless digital experiences.
+                                    <br><br>I enjoy solving problems, learning new technologies, and constantly improving my craft. Whether it’s front-end magic or creating things that not only look great but also work seamlessly, I love bringing ideas to life.
+                      <br><br>If you want to connect or collaborate, feel free to reach out!</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    
+                </div>
+            </section>
+
+
+<br><br><br><!--==================== SKILLS ====================-->
+<section class="questions section skills" id="skill">
+    <div class="aboutme grid">
+        <h2 class="skill-title" data-aos="fade-up" data-aos-duration="1000">My Skills</h2>
+    </div>
+
+    <div class="content contents">
+        <div class="column col-left">
+            <div class="paragraph-text" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="300">I specialize in front-end web development, creating visually appealing and user-friendly websites. With experience in HTML, CSS, JavaScript, and frameworks like React, I focus on building responsive designs that work seamlessly across devices.
+                <br><br> Over the years, I have worked on various projects, from personal portfolios to full-scale web applications. I’m always eager to learn new technologies and improve my skills to stay up to date with industry trends.</div>
+            <br>
+            <br>
+            <a href="#projects" class="button button--flex">
+                See more <i class="ri-arrow-down-line button__icon"></i>
+            </a>
+        </div>
+        <div class="column col-right">
+            <div class="bar">
+                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100">
+                    <span>HTML</span>
+                    <span>85%</span>
+                </div>
+                <div class="line html" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="140"></div>
+            </div>
+            <div class="bar">
+                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+                    <span>CSS</span>
+                    <span>85%</span>
+                </div>
+                <div class="line css" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="240"></div>
+            </div>
+            <div class="bar">
+                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="300">
+                    <span>Javascript</span>
+                    <span>60%</span>
+                </div>
+                <div class="line javascript" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="340"></div>
+            </div>
+            <div class="bar">
+                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">
+                    <span>ReactJS</span>
+                    <span>50%</span>
+                </div>
+                <div class="line reactjs" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440"></div>
+            </div>
+            <div class="bar">
+                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="500">
+                    <span>PHP</span>
+                    <span>60%</span>
+                </div>
+                <div class="line php" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="540"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+           
+<br><br><br>  <!--==================== PROJECT ====================-->
+            <section class="projects section container" id="project" style="background: linear-gradient(rgba(0, 0, 0, 0.189), rgb(0, 0, 0)), url('./assets/img/bg.jpg') no-repeat center center/cover; border-radius: 1rem;">
+                <div class="projects__bg logs">
+                    <h2 class="section__title-center projects__title">
+                        Example of My Projects
+                    </h2>
+
+                    <div class="projects__container grid">
+                        <div class="projects__card">
+                            <div class="projects__card-number">01</div>
+                            <article class="proj__card">
+                                
+                                <img src="assets/img/webite.JPG" alt="" class="proj__img">
+        
+                                <h3 class="proj__title">Website Landing Page</h3>
+                                <br>
+                               
+                                <button id="openModal" class="button">See more</button>
+    
+                                
+                            </article>
+                                
+                        
+                        </div>
+                      
+                        <div class="projects__card">
+                            <div class="projects__card-number">02</div>
+                            <article class="proj__card">
+                                <img src="assets/img/project.JPG" alt="" class="proj__img">
+                                <h3 class="proj__title">Sign Language into Word (Front   End Design)</h3>
+                                <br>
+                                <button id="openModal1" class="button">See more</button>
+                            </article>
+                        </div>
+
+                        <div class="projects__card">
+                            <div class="projects__card-number">03</div>
+                            <article class="proj__card">
+                                <img src="assets/img/training.JPG" alt="" class="proj__img">
+                                <h3 class="proj__title">Beneficiary Data Review & Report Generator</h3>
+                                <br>
+                                <button id="openModal2" class="button">See more</button>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+          
+            <div>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+
+            <!--==================== QUESTIONS ====================-->
+            <section class="questions section" id="faqs">
+                <h2 class="section__title-center questions__title container">
+                    Some common questions <br> were often asked
+                </h2>
+
+                <div class="questions__container container grid">
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What technologies do you specialize in?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    <br>I specialize in web development, working with technologies like HTML, CSS, JavaScript, PHP, React and also to non-web development tools such as Visual Basic and Android Studio..
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Can you work on freelance projects?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    <br>Yes! I'm open to freelance opportunities. Feel free to reach out if you have a project in mind.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How can I contact you for a project?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    <br>You can contact me via email or through my social media profiles listed in my portfolio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What is your experience in web development?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    <br>I have experience building responsive and dynamic websites, working with front-end frameworks, and optimizing web performance.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What inspired you to become a developer?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    <br>I’ve always been passionate about technology and problem-solving. Web development allows me to create functional and visually appealing digital experiences.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Can you help with UI/UX design as well?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    <br>Yes! While my main focus is development, I have a good eye for UI/UX and can implement modern, user-friendly designs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section container" id="contact">                
+                <div class="contact__container grid">
+                    <div class="contact__box">
+                        <h2 class="section__title">
+                            Reach out to me today <br> via any of the given <br> information
+                        </h2>
+
+                        <div class="contact__data">
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Call me for instant support</h3>
+                                <span class="contact__description">
+                                    <i class="ri-phone-line contact__icon"></i>
+                                    +0951 9250 404
+                                </span>
+                            </div>
+
+                            <div class="contact__information">
+                                <h3 class="contact__subtitle">Write me by mail</h3>
+                                <span class="contact__description">
+                                    <i class="ri-mail-line contact__icon"></i>
+                                    bares.markjay01@gmail.com
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <div class="contact__content">
+                                <input type="email" id="email" placeholder=" " class="contact__input" required>
+                                <label for="" class="contact__label">Email</label>
+                            </div>
+                    
+                            <div class="contact__content">
+                                <input type="text" id="subject" placeholder=" " class="contact__input" required>
+                                <label for="" class="contact__label">Subject</label>
+                            </div>
+                    
+                            <div class="contact__content contact__area">
+                                <textarea id="message" name="message" placeholder=" " class="contact__input" required></textarea>                              
+                                <label for="" class="contact__label">Message</label>
+                            </div>
+                        </div>
+                    
+                        <button type="button" id="sendMessageBtn" class="button button--flex">
+                            Send Message
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <i class="ri-user-line footer__logo-icon"></i>MARK JAY BARES
+                    </a>
+
+                    <h3 class="footer__title">
+                        Message me on Facebook <br> if you have a question.
+                    </h3>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">My Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">0000</li>
+                        <li class="footer__information">Brgy. Commowealth - 1121</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Me</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">+0951 9250 404</li>
+                        
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/markjay.bares.2024" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/markjaybares?igsh=dmF6ZTU5MDVtaGZj" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://www.instagram.com/markjaybares?igsh=dmF6ZTU5MDVtaGZj" class="footer__social-link">
+                                <i class="ri--fill"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        Thank you for visiting my page!
+                    </h3>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Copyright @2021 Coding Mark. All Rights Reserved.</p>
+        </footer>
+         <!--=============== MODAL OPEN ===============-->
+         <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>Website Project</h2>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Az_Vv1LapcQ?si=F5t1DEycSKjB540t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br>
+                <br>First project during 1st Year College.
+                <br>
+                <button id="closeModal" class="close">Close</button>
+            </div>
+        </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h2>Sign Language into Word Convertion</h2>
+                <br>
+                    <img id="imageDisplay" src="assets/img/project.JPG" alt="Project Image">
+                    <button id="nextBtn1" class="nextBtn"><i class="fas fa-arrow-right"></i></button>
+                <br>
+                <br>Our Capstone Project (My role is Front-End)
+                <br>
+                <button id="closeModal1" class="close">Close</button>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <h2>Beneficiary Data Review & Report Generator</h2>
+                <br>
+                    <img id="imageDisplay2" src="assets/img/training.JPG" alt="Project Image">
+                    <button id="nextBtn2" class="nextBtn"><i class="fas fa-arrow-right"></i></button>
+                <br>
+                <br>First project on my Training program.
+                <br>
+                <button id="closeModal2" class="close">Close</button>
+            </div>
+        </div>
+        
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const sendButton = document.getElementById("sendMessageBtn");
+        
+                sendButton.addEventListener("click", function() {
+                    // Get input values
+                    const email = document.getElementById("email").value.trim();
+                    const subject = document.getElementById("subject").value.trim();
+                    const message = document.getElementById("message").value.trim();
+        
+                    // Validate if fields are filled
+                    if (!email || !subject || !message) {
+                        Swal.fire({
+                            title: "Oops!",
+                            text: "Please fill in all fields before sending your message.",
+                            icon: "warning",
+                            confirmButtonText: "OK"
+                        });
+                        return; // Stop execution if fields are empty
+                    }
+        
+                    // If all fields are filled, show success message
+                    Swal.fire({
+                        title: "Thank You!",
+                        text: "Thank you for reaching me out!",
+                        icon: "success",
+                        confirmButtonText: "OK"
+                    });
+                });
+            });
+        </script>
+            
+
+
+    </body>
+</html>
