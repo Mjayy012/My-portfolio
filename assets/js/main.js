@@ -35,7 +35,7 @@ window.onload = typeWriter
 document.getElementById("downloadCVBtn").addEventListener("click", () => {
     const link = document.createElement("a");
     link.href = "assets/img/Mark jay Bares.pdf";
-    link.download = "Mark jay Bares - Resume.pdf";
+    link.download = "Mark jay Bares.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
