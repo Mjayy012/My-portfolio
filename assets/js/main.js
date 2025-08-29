@@ -34,8 +34,8 @@ window.onload = typeWriter
 /*=============== CV DOWNLOAD ===============*/
 document.getElementById("downloadCVBtn").addEventListener("click", () => {
     const link = document.createElement("a");
-    link.href = "assets/img/Mark jay Bares - Resume.pdf"; // Replace with the actual CV path
-    link.download = "Mark jay Bares - Resume.pdf"; // The name of the downloaded file
+    link.href = "assets/img/Mark jay Bares — resume.pdf";
+    link.download = "Mark jay Bares — resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
