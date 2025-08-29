@@ -10,6 +10,154 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+        <style>
+            /* Skills Grid Layout */
+            .skills-content {
+                text-align: center;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .skills-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                margin-top: 40px;
+            }
+            
+            .skills-category {
+                text-align: center;
+            }
+            
+            .category-title {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 20px;
+                color: #333;
+                position: relative;
+                display: inline-block;
+            }
+            
+            .category-title::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 3px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-radius: 2px;
+            }
+            
+            .category-cards {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            
+            /* Dark theme adjustments for categories */
+            .dark-theme .category-title {
+                color: #fff;
+            }
+            
+            .see-more-container {
+                text-align: left;
+                margin-top: 30px;
+            }
+            
+            .skill-card {
+                background: white;
+                padding: 25px 20px;
+                border-radius: 12px;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+                border: 1px solid #f0f0f0;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                flex: 0 0 180px;
+                min-height: 160px;
+            }
+            
+            .skill-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            }
+            
+            .skill-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            }
+            
+            .skill-icon {
+                font-size: 3rem;
+                margin-bottom: 15px;
+                color: #667eea;
+            }
+            
+            .skill-name {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 8px;
+            }
+            
+            .skill-level {
+                font-size: 0.9rem;
+                color: #888;
+                font-weight: 500;
+            }
+
+            /* Dark theme adjustments for skill cards */
+            .dark-theme .skill-card {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+            }
+            
+            .dark-theme .skill-name {
+                color: #fff;
+            }
+            
+            .dark-theme .skill-level {
+                color: #ccc;
+            }
+            
+            .dark-theme .skill-icon {
+                color: #764ba2;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .category-cards {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+                }
+                
+                .skill-card {
+                    flex: 0 0 auto;
+                    width: 160px;
+                    padding: 20px 15px;
+                }
+                
+                .skill-icon {
+                    font-size: 2.5rem;
+                }
+                
+                .skills-grid {
+                    gap: 30px;
+                }
+            }
+        </style>
+
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <title>Mark jay - Portfolio</title>
@@ -147,7 +295,7 @@
                                 <h2 class="content-title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">Hello! I am <span class="name">Mark jay Bares</span></h2>
                                 <p class="paragraph-text" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">
                                     Hi, I'm Mark jay Bares, a passionate web developer with expertise in creating user-friendly, responsive websites and web applications. With a strong foundation in HTML, CSS, JavaScript, and various frameworks, I enjoy bringing ideas to life and crafting seamless digital experiences.
-                                    <br><br>I enjoy solving problems, learning new technologies, and constantly improving my craft. Whether it’s front-end magic or creating things that not only look great but also work seamlessly, I love bringing ideas to life.
+                                    <br><br>I enjoy solving problems, learning new technologies, and constantly improving my craft. Whether it's front-end magic or creating things that not only look great but also work seamlessly, I love bringing ideas to life.
                       <br><br>If you want to connect or collaborate, feel free to reach out!</p>
                             </div>
                         </div>
@@ -165,50 +313,92 @@
     </div>
 
     <div class="content contents">
-        <div class="column col-left">
+        <div class="skills-content">
             <div class="paragraph-text" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="300">I specialize in front-end web development, creating visually appealing and user-friendly websites. With experience in HTML, CSS, JavaScript, and frameworks like React, I focus on building responsive designs that work seamlessly across devices.
-                <br><br> Over the years, I have worked on various projects, from personal portfolios to full-scale web applications. I’m always eager to learn new technologies and improve my skills to stay up to date with industry trends.</div>
-            <br>
-            <br>
-            <a href="#project" class="button button--flex">
-                See more <i class="ri-arrow-down-line button__icon"></i>
-            </a>
-        </div>
-        <div class="column col-right">
-            <div class="bar">
-                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100">
-                    <span>HTML</span>
-                    <span>85%</span>
+                <br><br> Over the years, I have worked on various projects, from personal portfolios to full-scale web applications. I'm always eager to learn new technologies and improve my skills to stay up to date with industry trends.</div>
+            
+            <div class="skills-grid">
+                <!-- Frontend Skills -->
+                <div class="skills-category">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="category-cards">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-name">HTML</div>
+                            <div class="skill-level">Structure & Markup</div>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-name">CSS</div>
+                            <div class="skill-level">Styling & Design</div>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-level">Interactive Features</div>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="skill-name">ReactJS</div>
+                            <div class="skill-level">Component Framework</div>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <div class="skill-name">Bootstrap</div>
+                            <div class="skill-level">CSS Framework</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="line html" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="140"></div>
+
+                <!-- Backend Skills -->
+                <div class="skills-category">
+                    <h3 class="category-title">Backend</h3>
+                    <div class="category-cards">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <div class="skill-name">PHP</div>
+                            <div class="skill-level">Server-side Logic</div>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-name">MySQL</div>
+                            <div class="skill-level">Database Management</div>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="skill-name">SQL</div>
+                            <div class="skill-level">Query Language</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="bar">
-                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
-                    <span>CSS</span>
-                    <span>85%</span>
-                </div>
-                <div class="line css" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="240"></div>
-            </div>
-            <div class="bar">
-                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="300">
-                    <span>Javascript</span>
-                    <span>60%</span>
-                </div>
-                <div class="line javascript" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="340"></div>
-            </div>
-            <div class="bar">
-                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">
-                    <span>ReactJS</span>
-                    <span>50%</span>
-                </div>
-                <div class="line reactjs" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440"></div>
-            </div>
-            <div class="bar">
-                <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="500">
-                    <span>PHP</span>
-                    <span>60%</span>
-                </div>
-                <div class="line php" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="540"></div>
+            
+            <div class="see-more-container">
+                <a href="#project" class="button button--flex">
+                    See more <i class="ri-arrow-down-line button__icon"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -355,7 +545,7 @@
 
                             <div class="questions__content">
                                 <p class="questions__description">
-                                    <br>I’ve always been passionate about technology and problem-solving. Web development allows me to create functional and visually appealing digital experiences.
+                                    <br>I've always been passionate about technology and problem-solving. Web development allows me to create functional and visually appealing digital experiences.
                                 </p>
                             </div>
                         </div>
@@ -568,4 +758,4 @@
 
 
     </body>
-</html>
+    </html>
