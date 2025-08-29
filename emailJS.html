@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EmailJS Contact Form Integration</title>
+</head>
+<body>
+    <form class="contact__form" id="contact-form">
+        <div class="contact__inputs">
+            <div class="contact__content">
+                <input type="email" id="email" name="user_email" placeholder=" " class="contact__input" required>
+                <label for="" class="contact__label">Email</label>
+            </div>
+    
+            <div class="contact__content">
+                <input type="text" id="subject" name="subject" placeholder=" " class="contact__input" required>
+                <label for="" class="contact__label">Subject</label>
+            </div>
+    
+            <div class="contact__content contact__area">
+                <textarea id="message" name="message" placeholder=" " class="contact__input" required></textarea>                              
+                <label for="" class="contact__label">Message</label>
+            </div>
+        </div>
+    
+        <button type="submit" id="sendMessageBtn" class="button button--flex">
+            Send Message
+            <i class="ri-arrow-right-up-line button__icon"></i>
+        </button>
+    </form>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <script>
+        (function(){
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('sendMessageBtn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    Swal.fire({
+                        title: "Thank You!",
+                        text: "Your message has been sent successfully! I'll get back to you soon.",
+                        icon: "success",
+                        confirmButtonText: "OK"
+                    });
+                    
+                    document.getElementById('contact-form').reset();
+                    
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    
+                    Swal.fire({
+                        title: "Oops!",
+                        text: "Something went wrong. Please try again or contact me directly.",
+                        icon: "error",
+                        confirmButtonText: "OK"
+                    });
+                })
+                .finally(function() {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+        });
+    </script>
+</body>
+</html>
